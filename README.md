@@ -1,3 +1,17 @@
+# Summary 概要
+This program is a sample for using external i2s for ESP32 by ESP-IDF.
+Because original example program dosen't work well, so I modified it.
+The following sentences is remained by original README.md from https://github.com/espressif/esp-idf
+
+このプログラムはESP32の外部i2sをESP-IDFで使うサンプルプログラムです。
+オリジナルのサンプルがうまく動かなかったので、動くよう修正しました。
+以下の文章はオリジナルのREADME.mdのままです。 オリジナルは　https://github.com/espressif/esp-idf
+
+这程序是一个例子， 用ESP-IDF使用外部i2s功能。
+原本样本程序不太成功， 我修改了一下。
+如下文章都是保持原本的README.md， 原本是在 https://github.com/espressif/esp-idf
+
+
 # I2S Example
 
 (See the README.md file in the upper level 'examples' directory for more information about examples.)
