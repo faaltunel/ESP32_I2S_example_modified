@@ -46,7 +46,7 @@ https://github.com/espressif/esp-idf/tree/master/examples/peripherals/i2s
 
 
 # Fritzing footprint data
-ESP32 : https://fritzing.org/projects/esp32_ds3231/
+ESP32 : https://fritzing.org/projects/esp32_ds3231/  
 MAX9837A : https://github.com/adafruit/Fritzing-Library
 
 
