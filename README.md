@@ -37,6 +37,8 @@ Modified:
 | SCK (BCLK) | continuous serial clock (Block CLocK) | GPIO_NUM_5 |
 | SD  | serial data | GPIO_NUM_26 |
 
+![Wiring](https://github.com/moppii-hub/ESP32_I2S_example_modified/blob/master/ESP32_I2S_example_modified_wiring.png)
+
 
 # Origin
 
