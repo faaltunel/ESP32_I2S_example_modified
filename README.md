@@ -1,39 +1,56 @@
 # Summary 概要
 This program is a sample for using external i2s for ESP32 by ESP-IDF.
-Because original example program dosen't work well, so I modified it.
-The following sentences is remained by original README.md from https://github.com/espressif/esp-idf
+Because original example program dosen't work well, so I modified it to work well. (And more simply for easy understanding)
+Original is from https://github.com/espressif/esp-idf .
 
+Modified:
+- work well
+- 1 channel(mono)
+- Pin assign(for compatible with ESP-ADF dev-boards)
+
+---
 このプログラムはESP32の外部i2sをESP-IDFで使うサンプルプログラムです。
-オリジナルのサンプルがうまく動かなかったので、動くよう修正しました。
-以下の文章はオリジナルのREADME.mdのままです。 オリジナルは　https://github.com/espressif/esp-idf
+オリジナルのサンプルがうまく動かなかったので、動くよう修正しました。（かつ理解しやすく変更した）
+オリジナルは https://github.com/espressif/esp-idf にあります。
 
+変更点：
+- 動作可能にした
+- モノラル化
+- ピンアサイン（ESP-ADF開発ボードに合わせた）
+
+---
 这程序是一个例子， 用ESP-IDF使用外部i2s功能。
 原本样本程序不太成功， 我修改了一下。
-如下文章都是保持原本的README.md， 原本是在 https://github.com/espressif/esp-idf
+原本是在 https://github.com/espressif/esp-idf 。
+
+变更点：
+- 能运行了
+- 单声道化
+- 端子分配 (跟ESP-ADF开发板一致了)
 
 
-# I2S Example
+# Origin
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
+https://github.com/espressif/esp-idf/tree/master/examples/peripherals/i2s
 
-In this example, we generate a 100Hz triangle and sine wave and send it out from left and right channels at a sample rate of 36kHz through the I2S bus.
 
-## How to Use Example
+# Pin Assgin
 
-### Hardware Required
+| pin name (MAX98357A pin name) | function | gpio_num |
+|:---:|:---:|:---:|
+| WS (LRCK)  |word select (L/R Clock)| GPIO_NUM_25 |
+| SCK (BCK) |continuous serial clock (Block Clock)| GPIO_NUM_5 |
+| SD (DIN)  |serial data (Data INput)| GPIO_NUM_26 |
+
+
+# How to Use Example
+
+## Hardware Required
 
 * A development board with ESP32 SoC (e.g., ESP32-DevKitC, ESP-WROVER-KIT, etc.)
 * A USB cable for power supply and programming
 
-### Configure the Project
-
-```
-idf.py menuconfig
-```
-
-* Set serial port under Serial Flasher Options.
-
-### Build and Flash
+## Build and Flash
 
 Build the project and flash it to the board, then run monitor tool to view serial output:
 
@@ -45,37 +62,4 @@ idf.py -p PORT flash monitor
 
 See the Getting Started Guide for full steps to configure and use ESP-IDF to build projects.
 
-## Example Output
 
-Running this example, you will see the Bits per Sample changes every 5 seconds after you have run this example. You can use `i2s_set_clk` to change the Bits per Sample and the Sample Rate. The output log can be seen below:
-
-```
-Test bits=24 free mem=293780, written data=2880
-I2S: DMA Malloc info, datalen=blocksize=480, dma_buf_count=6
-I2S: PLL_D2: Req RATE: 36000, real rate: 37878.000, BITS: 24, CLKM: 11, BCK: 8, MCLK: 13837837.838, SCLK: 1818144.000000, diva: 64, divb: 36
-
-Test bits=32 free mem=292336, written data=2880
-I2S: DMA Malloc info, datalen=blocksize=480, dma_buf_count=6
-I2S: PLL_D2: Req RATE: 36000, real rate: 36764.000, BITS: 32, CLKM: 17, BCK: 4, MCLK: 9216921.692, SCLK: 2352896.000000, diva: 64, divb: 23
-
-Test bits=16 free mem=293772, written data=1440
-I2S: DMA Malloc info, datalen=blocksize=240, dma_buf_count=6
-I2S: PLL_D2: Req RATE: 36000, real rate: 36764.000, BITS: 16, CLKM: 17, BCK: 8, MCLK: 9216921.692, SCLK: 1176448.000000, diva: 64, divb: 23
-```
-
-If you have a logic analyzer, you can use a logic analyzer to grab online data. The following table describes the pins we use by default (Note that you can also use other pins for the same purpose).
-
-| pin name| function | gpio_num |
-|:---:|:---:|:---:|
-| WS  |word select| GPIO_NUM_25 |
-| SCK |continuous serial clock| GPIO_NUM_26 |
-| SD  |serial data| GPIO_NUM_22 |
-
-## Troubleshooting
-
-* Program upload failure
-
-    * Hardware connection is not correct: run `idf.py -p PORT monitor`, and reboot your board to see if there are any output logs.
-    * The baud rate for downloading is too high: lower your baud rate in the `menuconfig` menu, and try again.
-
-For any technical queries, please open an [issue](https://github.com/espressif/esp-idf/issues) on GitHub. We will get back to you soon.
