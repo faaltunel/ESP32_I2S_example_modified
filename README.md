@@ -33,9 +33,9 @@ Modified:
 
 | pin name (MAX98357A board print) | function | gpio_num |
 |:---:|:---:|:---:|
-| WS (LRC)  |word select (L/R Clock)| GPIO_NUM_25 |
-| SCK (BCLK) |continuous serial clock (Block CLocK)| GPIO_NUM_5 |
-| SD  |serial data (Data INput)| GPIO_NUM_26 |
+| WS (LRC)  | word select (L/R Clock) | GPIO_NUM_25 |
+| SCK (BCLK) | continuous serial clock (Block CLocK) | GPIO_NUM_5 |
+| SD  | serial data | GPIO_NUM_26 |
 
 
 # Origin
