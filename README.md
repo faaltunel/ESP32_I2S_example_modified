@@ -29,18 +29,23 @@ Modified:
 - 端子分配 (跟ESP-ADF开发板一致了)
 
 
+# Pin Assgin
+
+| pin name (MAX98357A board print) | function | gpio_num |
+|:---:|:---:|:---:|
+| WS (LRC)  |word select (L/R Clock)| GPIO_NUM_25 |
+| SCK (BCLK) |continuous serial clock (Block CLocK)| GPIO_NUM_5 |
+| SD  |serial data (Data INput)| GPIO_NUM_26 |
+
+
 # Origin
 
 https://github.com/espressif/esp-idf/tree/master/examples/peripherals/i2s
 
 
-# Pin Assgin
-
-| pin name (MAX98357A pin name) | function | gpio_num |
-|:---:|:---:|:---:|
-| WS (LRCK)  |word select (L/R Clock)| GPIO_NUM_25 |
-| SCK (BCK) |continuous serial clock (Block Clock)| GPIO_NUM_5 |
-| SD (DIN)  |serial data (Data INput)| GPIO_NUM_26 |
+# Fritzing footprint data
+ESP32 : https://fritzing.org/projects/esp32_ds3231/
+MAX9837A : https://github.com/adafruit/Fritzing-Library
 
 
 # How to Use Example
