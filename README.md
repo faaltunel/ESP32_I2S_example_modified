@@ -38,9 +38,9 @@ Modified:
 
 | pin name (MAX98357A board print) | function | gpio_num |
 |:---:|:---:|:---:|
-| WS (LRC)  | word select (L/R Clock) | GPIO_NUM_25 |
+| WS (LRC) | word select (L/R Clock) | GPIO_NUM_25 |
 | SCK (BCLK) | continuous serial clock (Block CLocK) | GPIO_NUM_5 |
-| SD  | serial data | GPIO_NUM_26 |
+| SD (DIN) | serial data (Data IN) | GPIO_NUM_26 |
 
 ![Wiring](https://github.com/moppii-hub/ESP32_I2S_example_modified/blob/master/ESP32_I2S_example_modified_wiring.png)
 
@@ -51,7 +51,7 @@ https://github.com/espressif/esp-idf/tree/master/examples/peripherals/i2s
 
 
 # Fritzing footprint data
-ESP32 : https://fritzing.org/projects/esp32_ds3231/
+ESP32 : https://fritzing.org/projects/esp32_ds3231/  
 MAX9837A : https://github.com/adafruit/Fritzing-Library
 
 
