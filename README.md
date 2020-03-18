@@ -18,7 +18,8 @@ Modified:
 - モノラル化
 - ピンアサイン（ESP-ADF開発ボードに合わせた）
 
-※日本語Onlyですが、Qiitaに解説投稿しました。
+
+※日本語Onlyですが、Qiitaに解説投稿しました。  
 [ESP-IDF(ESP32) v4 で外部I2S DACを使って正弦波を鳴らす](https://qiita.com/moppii/items/e109324d21429f12e2bd)
 
 
