@@ -1,2 +1,4 @@
-idf_component_register(SRCS "i2s_example_modified_main.c"
-                    INCLUDE_DIRS ".")
+set(COMPONENT_SRCS "passthru.c")
+set(COMPONENT_ADD_INCLUDEDIRS .)
+
+register_component()

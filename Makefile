@@ -4,5 +4,5 @@
 #
 VERBOSE = 1
 PROJECT_NAME := esp32-i2s-driver-example-modified
-include $(IDF_PATH)/make/project.mk
+include $(ADF_PATH)/project.mk
 
