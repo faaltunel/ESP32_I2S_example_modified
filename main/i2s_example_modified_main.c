@@ -72,14 +72,22 @@ void app_main()
         .use_apll = false,
         .intr_alloc_flags = ESP_INTR_FLAG_LEVEL1                                //Interrupt level 1
     };
+    /*
     i2s_pin_config_t pin_config = {
         .bck_io_num = I2S_BCK_IO,
         .ws_io_num = I2S_WS_IO,
         .data_out_num = I2S_DO_IO,
         .data_in_num = I2S_DI_IO                                               //Not used
     };
+    */
     i2s_driver_install(I2S_NUM, &i2s_config, 0, NULL);
-    i2s_set_pin(I2S_NUM, &pin_config);
+
+//    i2s_set_pin(I2S_NUM, &pin_config);
+    i2s_set_pin(I2S_NUM, NULL); //for internal DAC, this will enable both of the internal channels
+
+    //You can call i2s_set_dac_mode to set built-in DAC output mode.
+    i2s_set_dac_mode(I2S_DAC_CHANNEL_BOTH_EN);
+
     i2s_set_clk(I2S_NUM, SAMPLE_RATE, 16, 1);       //16bits, 1 channels
 
     //generate sine wave data (unsigned int 16bit)
