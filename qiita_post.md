@@ -1,7 +1,3 @@
-Title : ESP-IDF(ESP32) v4 で外部I2S DACを使って正弦波を鳴らす
-Tag : ESP32 ESP-IDF I2S dac 信号処理 
----
-
 # はじめに
 　ESP-IDFで外部I2Sを使って音声信号を出力しようとしたところ、公式のサンプルプログラムがうまく動きませんでした。調べてみると、「サンプルがうまく動かない」という先例はいくつか見つかりましたが、上手く動くプログラムが見つからなかったので、本投稿をすることにしました。
 
@@ -37,7 +33,7 @@ $ git clone https://github.com/moppii-hub/ESP32_I2S_example_modified.git
 
 ## 回路の製作
 　以下の通りに配線します。
-![Wiring](https://github.com/moppii-hub/ESP32_I2S_example_modified/blob/master/ESP32_I2S_example_modified_wiring.png)
+![ESP32_I2S_example_modified_wiring.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/603551/20ed0e84-7233-4fa5-71ab-d0998ecd68af.png)
 
 
 
@@ -160,3 +156,5 @@ http://www.narimatsu.net/blog/?p=11293
 - [ESP-WROOM-32](http://akizukidenshi.com/catalog/g/gM-11819/)
 - [Adafruit I2S 3W Class D Amplifier Breakout](https://www.marutsu.co.jp/pc/i/829728/)  
 ※私は事情で現在中国在住のため、中国で類似品を購入し使用しています。
+
+
